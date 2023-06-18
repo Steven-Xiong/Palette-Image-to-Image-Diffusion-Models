@@ -31,8 +31,8 @@ def load_data(home):
 
 if __name__ == '__main__':
     home = './' # path saved .npy
-    flist_save_path = './flist'
-    image_save_path = './images' # images save path
+    flist_save_path = '/home/x.zhexiao/Palette-Image-to-Image-Diffusion-Models/datasets/flist'    #'./flist'
+    image_save_path = '/home/x.zhexiao/Palette-Image-to-Image-Diffusion-Models/datasets/celeba_hq_256'  #'./images' # images save path
 
     all_color, all_l = load_data(home)
     image_color, image_l = convert_abl(all_color, all_l)
