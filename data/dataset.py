@@ -176,7 +176,7 @@ class ColorizationDataset(data.Dataset):
 
 # for flow condition
 class FlowbpsDataset(data.Dataset):
-    def __init__(self, data_root, data_flist, data_len=-1, image_size=[160, 960], loader=pil_loader):
+    def __init__(self, data_root, data_flist, data_len=-1, image_size=[80, 480], loader=pil_loader):
         self.data_root = data_root
         flist = make_dataset(data_flist)
         if data_len > 0:

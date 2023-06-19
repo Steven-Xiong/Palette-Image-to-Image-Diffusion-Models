@@ -106,9 +106,11 @@ class VisualWriter():
 
         ''' get names and corresponding images from results[OrderedDict] '''
         try:
+            #import pdb; pdb.set_trace()
             names = results['name']
             outputs = Util.postprocess(results['result'])
-            for i in range(len(names)): 
+            for i in range(len(names)):
+                names[i] = names[i].replace('/','_') 
                 Image.fromarray(outputs[i]).save(os.path.join(result_path, names[i]))
         except:
             raise NotImplementedError('You must specify the context of name and result in save_current_results functions of model.')
